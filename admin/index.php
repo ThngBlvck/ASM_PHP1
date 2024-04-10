@@ -41,6 +41,7 @@ ob_start();
     include "components/pdo.php";
     include "../admin/modules/category/category.php";
     include "../admin/modules/product/product.php";
+    include "../admin/modules/user/user.php";
     include "../config.php";
     
     ?>
@@ -89,15 +90,15 @@ ob_start();
 
                 break;
 
-              case "order":
+              case "user":
 
                 switch ($_GET['action']) {
                   case "list":
-                    include "modules/order/list.php";
+                    include "modules/user/list.php";
                     break;
 
                   default:
-                    include "modules/order/list.php";
+                    include "modules/user/list.php";
                     break;
                 }
 
